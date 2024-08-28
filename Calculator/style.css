@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #1E1E2E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Calculator container */
+.calculator {
+    width: 320px;
+    height: 500px;
+    background: linear-gradient(145deg, #323349, #2b2b3d);
+    border-radius: 20px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Calculator screen */
+form input {
+    width: 100%;
+    height: 100px;
+    background: #191932;
+    border: none;
+    border-radius: 15px;
+    font-size: 2.5rem;
+    padding: 1rem;
+    color: #EDEDED;
+    text-align: right;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.5), inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+/* Button container */
+.button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-top: 10px;
+}
+
+/* General button styles */
+button {
+    width: 100%;
+    height: 70px;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2), -2px -2px 6px rgba(255, 255, 255, 0.1);
+}
+
+/* Button hover effect */
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3), -3px -3px 8px rgba(255, 255, 255, 0.2);
+}
+
+/* Specific button colors */
+.btn-yellow {
+    background: #F39C12;
+    color: #FFF;
+}
+
+.btn-grey {
+    background: #7F8C8D;
+    color: #FFF;
+}
+
+.btn-equal {
+    background: #27AE60;
+    color: #FFF;
+    grid-column: span 2; /* Make the equal button span two columns */
+}
+
+.btn-clear {
+    background: #C0392B;
+    color: #FFF;
+    grid-column: span 2; /* Make the clear button span two columns */
+}
+
+/* Button active effect */
+button:active {
+    transform: translateY(1px);
+    box-shadow: inset 1px 1px 5px rgba(0, 0, 0, 0.4);
+}
